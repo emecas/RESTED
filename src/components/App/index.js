@@ -2,7 +2,7 @@ import GlobalStyle from './GlobalStyles';
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import HTML5Backend from 'react-dnd-html5-backend';
-import { DragDropContext } from 'react-dnd';
+import { DndProvider } from 'react-dnd';
 import flow from 'lodash/flow';
 
 import Header from 'components/Header';
@@ -59,32 +59,34 @@ class App extends React.Component {
     const { collectionsMinimized } = this.props;
 
     return (
-      <Wrapper>
-        <GlobalStyle /> 
-        <Header />
-        <MainContent>
-          <LeftCol
-            xsHidden
-            sm={collectionsMinimized ? null : 4}
-            collapsed={collectionsMinimized}
-          >
-            <aside>
-              <LeftPanel />
-            </aside>
-          </LeftCol>
-          <RightCol
-            xs={12}
-            sm={collectionsMinimized ? 12 : 8}
-          >
-            <main>
-              <Request />
-              <Response />
-            </main>
-          </RightCol>
-        </MainContent>
-        <Footer />
-        <Modal />
-      </Wrapper>
+      <DndProvider backend={HTML5Backend}>
+        <Wrapper>
+          <GlobalStyle /> 
+          <Header />
+          <MainContent>
+            <LeftCol
+              xsHidden
+              sm={collectionsMinimized ? null : 4}
+              collapsed={collectionsMinimized}
+            >
+              <aside>
+                <LeftPanel />
+              </aside>
+            </LeftCol>
+            <RightCol
+              xs={12}
+              sm={collectionsMinimized ? 12 : 8}
+            >
+              <main>
+                <Request />
+                <Response />
+              </main>
+            </RightCol>
+          </MainContent>
+          <Footer />
+          <Modal />
+        </Wrapper>
+       </DndProvider>
     );
   }
 }

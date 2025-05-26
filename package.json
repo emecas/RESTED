@@ -41,7 +41,8 @@
     "react-autosuggest": "^10.1.0",
     "fuzzysort": "^2.0.4",
     "uuid-js": "^0.7.5",
-	  "lodash": "^4.17.21"
+	  "lodash": "^4.17.21",
+    "localforage": "^1.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.24.6",
