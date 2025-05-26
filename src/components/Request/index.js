@@ -1,6 +1,5 @@
-import React, { PropTypes } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { reduxForm, Field, Fields, FieldArray, getFormValues } from 'redux-form';
 import { Row, Col, Panel, Form } from 'react-bootstrap';
 import flow from 'lodash/flow';
 
@@ -21,88 +20,82 @@ export const requestForm = 'request';
 
 function Request(props) {
   const {
-    formValues = {},
+    request = DEFAULT_REQUEST,
     placeholderUrl,
-    handleSubmit,
     sendRequest,
     updateRequest,
     editMode,
   } = props;
 
+  const [formValues, setFormValues] = useState(request);
+
   const isCustom = checkIfCustom(formValues.method);
 
-  return (
-    <Panel header={<Titlebar />}>
-      <Form
-        horizontal
-        onSubmit={handleSubmit(editMode ? updateRequest : sendRequest)}
-      >
-        <Row>
-          <Col sm={isCustom ? 4 : 2}>
-            <Field
-              name="method"
-              component={MethodField}
-            />
-          </Col>
-          <Col sm={isCustom ? 6 : 7}>
-            <Field
-              name="url"
-              component={URLField}
-              placeholderUrl={placeholderUrl}
-            />
-          </Col>
-          <Col xsHidden mdHidden lgHidden sm={3}>
-            <SubmitButton compact editMode={editMode} />
-          </Col>
-          <Col smHidden xs={12} md={3}>
-            <SubmitButton compact={false} editMode={editMode} />
-          </Col>
-        </Row>
+  function handleChange(field, value) {
+    const updated = { ...formValues, [field]: value };
+    setFormValues(updated);
+    updateRequest(updated);
+  }
 
-        <FieldArray
-          name="headers"
-          component={HeadersField}
-        />
-        <Fields
-          names={['basicAuth.username', 'basicAuth.password']}
-          component={BasicAuthField}
-        />
-        {!['GET', 'HEAD'].includes(formValues.method) && (
-          <BodyField />
-        )}
-      </Form>
-    </Panel>
+  function handleHeadersChange(headers) {
+    handleChange('headers', headers);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    sendRequest(formValues);
+  }
+
+  return (
+    <Form onSubmit={handleSubmit}>
+      <Titlebar />
+      <Row>
+        <Col xs={12}>
+          <URLField
+            value={formValues.url}
+            onChange={e => handleChange('url', e.target.value)}
+            placeholder={placeholderUrl}
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={6}>
+          <MethodField
+            value={formValues.method}
+            onChange={e => handleChange('method', e.target.value)}
+          />
+        </Col>
+        <Col xs={6}>
+          <SubmitButton disabled={false} />
+        </Col>
+      </Row>
+      <HeadersField
+        headers={formValues.headers || []}
+        onChangeHeaders={handleHeadersChange}
+      />
+      <BasicAuthField
+        basicAuth={formValues.basicAuth}
+        onChangeBasicAuth={ba => handleChange('basicAuth', ba)}
+      />
+      <BodyField
+        bodyType={formValues.bodyType}
+        formData={formValues.formData}
+        data={formValues.data}
+        onChangeBodyType={bt => handleChange('bodyType', bt)}
+        onChangeFormData={fd => handleChange('formData', fd)}
+        onChangeData={d => handleChange('data', d)}
+      />
+    </Form>
   );
 }
 
-Request.propTypes = {
-  placeholderUrl: PropTypes.string,
-  formValues: PropTypes.shape({}),
-  handleSubmit: PropTypes.func.isRequired,
-  sendRequest: PropTypes.func.isRequired,
-  updateRequest: PropTypes.func.isRequired,
-  editMode: PropTypes.bool.isRequired,
-
-};
-
-const formOptions = {
-  form: requestForm,
-};
-
 const mapStateToProps = state => ({
-  useFormData: state.request.useFormData,
+  request: state.request.currentRequest, // Adjust if needed
   placeholderUrl: state.request.placeholderUrl,
-  initialValues: DEFAULT_REQUEST,
-  formValues: getFormValues(requestForm)(state),
   editMode: isEditMode(state),
 });
 
-export { Request };
-export default flow(
-  reduxForm(formOptions),
-  connect(mapStateToProps, {
-    ...requestActions,
-    ...collectionsActions,
-  }),
-)(Request);
-
+export default connect(mapStateToProps, {
+  ...requestActions,
+  ...collectionsActions,
+})(Request);

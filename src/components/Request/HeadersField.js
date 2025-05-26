@@ -1,102 +1,69 @@
 import React, { PropTypes } from 'react';
-import { Field } from 'redux-form';
-import {
-  FormGroup,
-  FormControl,
-  Row,
-  Col,
-} from 'react-bootstrap';
-
+import { FormGroup, FormControl, Row, Col } from 'react-bootstrap';
 import Fonticon from 'components/Fonticon';
 import Collapsable from 'components/Collapsable';
-
 import HeaderNameAutosuggest from './HeaderNameAutosuggest';
 import { UnstyledButton, TrashButton } from './StyledComponents';
 
-function renderValueField({ input, placeholder }) {
-  return (
-    <FormControl
-      type="text"
-      placeholder={placeholder}
-      {...input}
-    />
-  );
-}
+function HeadersField({ headers, onChangeHeaders }) {
+  function handleNameChange(index, newName) {
+    const updated = [...headers];
+    updated[index] = { ...updated[index], name: newName };
+    onChangeHeaders(updated);
+  }
 
-renderValueField.propTypes = {
-  input: PropTypes.shape({}).isRequired,
-  placeholder: PropTypes.string.isRequired,
-};
+  function handleValueChange(index, newValue) {
+    const updated = [...headers];
+    updated[index] = { ...updated[index], value: newValue };
+    onChangeHeaders(updated);
+  }
 
-function HeadersField({ meta, fields }) {
+  function handleRemove(index) {
+    const updated = headers.slice();
+    updated.splice(index, 1);
+    onChangeHeaders(updated);
+  }
+
+  function handleAdd() {
+    onChangeHeaders([...headers, { name: '', value: '' }]);
+  }
+
   return (
-    <Collapsable
-      title="Headers"
-      id="headers"
-    >
-      {fields.map((field, key) => (
-        <FormGroup
-          key={key}
-          controlId={`header.${field}`}
-          validationState={meta.invalid ? 'error' : null}
-        >
+    <div>
+      {headers.map((header, key) => (
+        <Row key={key}>
           <Col xs={5}>
-            <Field
-              name={`${field}.name`}
-              component={HeaderNameAutosuggest}
-              placeholder="Name"
+            <HeaderNameAutosuggest
+              value={header.name}
+              onChange={e => handleNameChange(key, e.target.value)}
             />
           </Col>
           <Col xs={5}>
-            <Field
-              name={`${field}.value`}
-              component={renderValueField}
+            <FormControl
+              type="text"
+              value={header.value}
+              onChange={e => handleValueChange(key, e.target.value)}
               placeholder="Value"
             />
           </Col>
           <Col xs={2}>
-            <TrashButton
-              id={`removeHeaderButton${key}`}
-              tooltip="Remove header"
-              icon="trash"
-              onClick={e => {
-                e.preventDefault();
-                fields.remove(key);
-              }}
-            />
+            <TrashButton onClick={() => handleRemove(key)} />
           </Col>
-        </FormGroup>
+        </Row>
       ))}
-
-      <Row>
-        <Col xs={12}>
-          <UnstyledButton
-            id="addHeaderButton"
-            bsStyle="link"
-            onClick={() => fields.push({})}
-          >
-            <Fonticon icon="plus" />
-            Add header
-          </UnstyledButton>
-        </Col>
-      </Row>
-    </Collapsable>
+      <UnstyledButton onClick={handleAdd}>Add header</UnstyledButton>
+    </div>
   );
 }
 
-// ESLint is not smart enough to see that these are used
-/* eslint-disable react/no-unused-prop-types */
 HeadersField.propTypes = {
-  fields: PropTypes.shape({
-    map: PropTypes.func.isRequired,
-    remove: PropTypes.func.isRequired,
-    push: PropTypes.func.isRequired,
-  }).isRequired,
-  meta: PropTypes.shape({
-    invalid: PropTypes.bool.isRequired,
-  }).isRequired,
+  headers: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      value: PropTypes.string,
+    })
+  ).isRequired,
+  onChangeHeaders: PropTypes.func.isRequired,
 };
-/* eslint-enable react/no-unused-prop-types */
 
 export default HeadersField;
-
