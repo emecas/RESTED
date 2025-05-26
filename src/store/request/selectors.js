@@ -6,6 +6,6 @@ export const getInterceptedResponse = state => state.request.interceptedResponse
 export const getRedirectChain = state => state.request.redirectChain;
 export const getLoading = state => state.request.loading;
 
-// Replace the following with your new form state selectors
+// Replace with direct access or your new form state structure
 export const getBodyType = state => state.request.bodyType;
 export const getHeaders = state => state.request.headers;

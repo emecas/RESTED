@@ -16,13 +16,12 @@ import { getPlaceholderUrl, getHeaders } from './selectors';
 import { executeRequest, receiveResponse } from './actions';
 import { SEND_REQUEST, REQUEST_FAILED, SELECT_REQUESTED, CHANGE_BODY_TYPE } from './types';
 
-// Removed: import { initialize, change } from 'redux-form';
+// Removed: import { change, initialize } from 'redux-form';
 
 export function* getUrl(request) {
   if (!request.url) {
     const fallbackUrl = yield select(getPlaceholderUrl);
-    // Removed: yield put(change(requestForm, 'url', fallbackUrl));
-    // Instead, update your form state via your new solution if necessary
+    // If you need to update the form state, do it here with your new approach
     return fallbackUrl;
   }
   return request.url.trim();
@@ -56,19 +55,16 @@ export function* buildHeaders({ headers, basicAuth }) {
   return requestHeaders;
 }
 
-// Needed for unit tests to be consistent
 export function getBeforeTime() {
   return Date.now();
 }
 
-// Needed for unit tests to be consistent
 export function getMillisPassed(before) {
   return Date.now() - before;
 }
 
 function buildResponseHeaders(response) {
   const headers = [];
-  // eslint-disable-next-line no-restricted-syntax
   for (const header of response.headers) {
     headers.push({
       name: header[0],
@@ -91,7 +87,6 @@ export function* fetchData({ request }) {
     const resource = yield call(createResource, request);
     const headers = yield call(buildHeaders, request);
     const ignoreCache = yield select(getIgnoreCache);
-    // Build body for requests that support it
     let body;
     if (!['GET', 'HEAD'].includes(request.method)) {
       body = request.bodyType !== 'custom'
@@ -108,7 +103,7 @@ export function* fetchData({ request }) {
       redirect: 'follow',
       body,
       headers,
-      credentials: 'include', // Include cookies
+      credentials: 'include',
       cache: ignoreCache ? 'no-store' : 'default',
     });
     const millisPassed = yield call(getMillisPassed, beforeTime);
@@ -129,13 +124,12 @@ export function* fetchData({ request }) {
 }
 
 function* selectRequest({ request }) {
-  // Removed: yield put(initialize(requestForm, request));
+  // If you need to initialize form state, do it here with your new approach
   yield call(focusUrlField);
 }
 
 function setContentType(array, value) {
   const index = array.findIndex(item => item.name === 'Content-Type');
-  // Replace any existing Content-Type headers
   if (index > -1) {
     return [
       ...array.slice(0, index),
@@ -143,7 +137,6 @@ function setContentType(array, value) {
       ...array.slice(index + 1),
     ];
   }
-  // When the last row is empty, overwrite it instead of pushing
   const lastItem = array.length >= 1
     ? array[array.length - 1]
     : null;
@@ -176,8 +169,7 @@ export function* changeBodyTypeSaga({ bodyType }) {
     default:
       throw new Error(`Body type ${bodyType} is not supported`);
   }
-  // Removed: yield put(change(requestForm, 'headers', headers));
-  // For persistence on load
+  // If you need to update headers in form state, do it here with your new approach
   yield put(updateOption('bodyType', bodyType));
 }
 

@@ -1,5 +1,4 @@
-import React, { PropTypes } from 'react';
-import Immutable from 'immutable';
+import React from 'react';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 import { connect } from 'react-redux';
 
@@ -20,13 +19,11 @@ import * as optionsActions from 'store/options/actions';
 
 import { StyledHeader } from './StyledComponents';
 
-// Removed redux-form imports and related logic
-
 function handleSubmit(props, collectionIndex = 0) {
   const addableRequest = Object.assign({}, props.request, {
     id: UUID.create().toString(),
   });
-  props.addRequest(Immutable.fromJS(addableRequest), collectionIndex);
+  props.addRequest(addableRequest, collectionIndex);
   props.removeModal();
 }
 
@@ -41,31 +38,17 @@ function Titlebar(props) {
     collectionsMinimized,
     isEditing,
     editingRequest,
-    // formPristine,
-    // formInvalid,
-    // touch,
-    // The above redux-form props are removed.
+    addCollection,
+    request,
+    addRequest,
+    setModalData,
+    updateOption,
   } = props;
-
-  // You may need to reimplement pristine/invalid logic with your new form solution
-  // For now, we comment out the block that used formPristine/formInvalid
-
-  // if (formPristine || formInvalid) {
-  //   // Debugging for #98
-  //   console.log(
-  //     'Not adding request because ' +
-  //     `formPristine=${formPristine} || formInvalid=${formInvalid}`,
-  //     props,
-  //   );
-  //   // Set URL as touched to give feedback to user
-  //   touch('request', 'url');
-  //   return;
-  // }
 
   function onAddClick() {
     switch (collections.size) {
       case 0:
-        props.addCollection();
+        addCollection();
       case 1: // eslint-disable-line no-fallthrough
         handleSubmit(props);
         break;
@@ -75,8 +58,6 @@ function Titlebar(props) {
           removeModal,
         );
     }
-    // TODO if (requestExists)
-    // Modal (do you want to replace?)
   }
 
   return (
@@ -108,37 +89,28 @@ function Titlebar(props) {
 
 Titlebar.propTypes = {
   collections: ImmutablePropTypes.listOf(immutableCollectionShape),
-  removeModal: PropTypes.func.isRequired,
-  collectionsMinimized: PropTypes.bool,
-  isEditing: PropTypes.bool.isRequired,
-  editingRequest: PropTypes.shape({
-    name: PropTypes.string,
+  removeModal: React.PropTypes.func.isRequired,
+  collectionsMinimized: React.PropTypes.bool,
+  isEditing: React.PropTypes.bool.isRequired,
+  editingRequest: React.PropTypes.shape({
+    name: React.PropTypes.string,
   }),
-  addCollection: PropTypes.func.isRequired,
-  request: PropTypes.shape({
-    url: PropTypes.string,
-  }).isRequired,
-  addRequest: PropTypes.func.isRequired,
-  setModalData: PropTypes.func.isRequired,
-  // Removed redux-form-specific propTypes
-  // formPristine: PropTypes.bool.isRequired,
-  // formInvalid: PropTypes.bool.isRequired,
-  // touch: PropTypes.func.isRequired,
+  addCollection: React.PropTypes.func.isRequired,
+  request: React.PropTypes.object.isRequired,
+  addRequest: React.PropTypes.func.isRequired,
+  setModalData: React.PropTypes.func.isRequired,
+  updateOption: React.PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
-  // request: getFormValues('request')(state), // Remove if you no longer use redux-form for request
   collections: getCollections(state),
   collectionsMinimized: getCollectionsMinimized(state),
   isEditing: isEditMode(state),
   editingRequest: getEditingRequest(state),
-  // formPristine: isPristine('request')(state),
-  // formInvalid: isInvalid('request')(state),
 });
 
 export default connect(mapStateToProps, {
   ...collectionsActions,
   ...modalActions,
   ...optionsActions,
-  // touch, // Remove redux-form action
 })(Titlebar);

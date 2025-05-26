@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { Row, Col, Panel, Form } from 'react-bootstrap';
-import flow from 'lodash/flow';
+import { Row, Col, Form } from 'react-bootstrap';
 
 import * as requestActions from 'store/request/actions';
 import * as collectionsActions from 'store/collections/actions';
@@ -15,8 +14,6 @@ import SubmitButton from './SubmitButton';
 import HeadersField from './HeadersField';
 import BasicAuthField from './BasicAuthField';
 import BodyField from './BodyField';
-
-export const requestForm = 'request';
 
 function Request(props) {
   const {
@@ -39,6 +36,22 @@ function Request(props) {
 
   function handleHeadersChange(headers) {
     handleChange('headers', headers);
+  }
+
+  function handleBasicAuthChange(basicAuth) {
+    handleChange('basicAuth', basicAuth);
+  }
+
+  function handleBodyTypeChange(bodyType) {
+    handleChange('bodyType', bodyType);
+  }
+
+  function handleFormDataChange(formData) {
+    handleChange('formData', formData);
+  }
+
+  function handleDataChange(data) {
+    handleChange('data', data);
   }
 
   function handleSubmit(event) {
@@ -75,22 +88,22 @@ function Request(props) {
       />
       <BasicAuthField
         basicAuth={formValues.basicAuth}
-        onChangeBasicAuth={ba => handleChange('basicAuth', ba)}
+        onChangeBasicAuth={handleBasicAuthChange}
       />
       <BodyField
         bodyType={formValues.bodyType}
         formData={formValues.formData}
         data={formValues.data}
-        onChangeBodyType={bt => handleChange('bodyType', bt)}
-        onChangeFormData={fd => handleChange('formData', fd)}
-        onChangeData={d => handleChange('data', d)}
+        onChangeBodyType={handleBodyTypeChange}
+        onChangeFormData={handleFormDataChange}
+        onChangeData={handleDataChange}
       />
     </Form>
   );
 }
 
 const mapStateToProps = state => ({
-  request: state.request.currentRequest, // Adjust if needed
+  request: state.request.currentRequest, // Adjust as needed for your state shape
   placeholderUrl: state.request.placeholderUrl,
   editMode: isEditMode(state),
 });
