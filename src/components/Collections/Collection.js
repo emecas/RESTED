@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { findDOMNode } from 'react-dom';
 import { DragSource, DropTarget } from 'react-dnd';
 import { Collapse } from 'react-bootstrap';
-import flow from 'lodash.flow';
+import flow from 'lodash/flow';
 import classNames from 'classnames';
 
 import IconButton from 'components/IconButton';

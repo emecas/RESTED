@@ -1,7 +1,6 @@
 import Immutable from 'immutable';
 import localforage from 'localforage';
 import { select, put, call, takeEvery } from 'redux-saga/effects';
-import { change } from 'redux-form';
 
 import { requestForm } from 'components/Request';
 
@@ -17,19 +16,17 @@ function* updateLocalStorage() {
 function* fetchOptionsSaga() {
   yield put(startFetch());
   let options = yield call(localforage.getItem, 'options');
-
   // v1 -> v2 migration
   if (options && options.length && options[0].options) {
     options = options[0].options;
   }
-
   options = Immutable.fromJS(options) || Immutable.Map();
   yield put(receiveOptions(options));
-
   // The selected bodyType is persisted across reloads and is put into the form
   // when we are done loading the initial options
   const bodyType = yield select(getBodyType);
-  yield put(change(requestForm, 'bodyType', bodyType));
+  // Removed: yield put(change(requestForm, 'bodyType', bodyType));
+  // Instead, update your form state via your new solution if necessary
 }
 
 function* updateOptionSaga({ option, value }) {
@@ -41,4 +38,3 @@ export default function* rootSaga() {
   yield takeEvery(FETCH_REQUESTED, fetchOptionsSaga);
   yield takeEvery(UPDATE_REQUESTED, updateOptionSaga);
 }
-

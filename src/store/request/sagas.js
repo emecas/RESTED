@@ -1,6 +1,6 @@
 import Immutable from 'immutable';
 import UUID from 'uuid-js';
-import { initialize, change } from 'redux-form';
+
 import { call, apply, put, select, takeLatest, takeEvery } from 'redux-saga/effects';
 
 import base64Encode from 'utils/base64';
@@ -12,18 +12,19 @@ import { getUrlVariables } from 'store/urlVariables/selectors';
 import { requestForm } from 'components/Request';
 import { updateOption } from 'store/options/actions';
 import { getIgnoreCache } from 'store/options/selectors';
-
 import { getPlaceholderUrl, getHeaders } from './selectors';
 import { executeRequest, receiveResponse } from './actions';
 import { SEND_REQUEST, REQUEST_FAILED, SELECT_REQUESTED, CHANGE_BODY_TYPE } from './types';
 
+// Removed: import { initialize, change } from 'redux-form';
+
 export function* getUrl(request) {
   if (!request.url) {
     const fallbackUrl = yield select(getPlaceholderUrl);
-    yield put(change(requestForm, 'url', fallbackUrl));
+    // Removed: yield put(change(requestForm, 'url', fallbackUrl));
+    // Instead, update your form state via your new solution if necessary
     return fallbackUrl;
   }
-
   return request.url.trim();
 }
 
@@ -33,7 +34,6 @@ export function* getParameters() {
     ...prev,
     [parameter.get('name')]: parameter.get('value'),
   }), {});
-
   return parameters;
 }
 
@@ -41,7 +41,6 @@ export function* createResource(request) {
   const url = yield call(getUrl, request);
   const parameters = yield call(getParameters);
   const resource = mapParameters(url, parameters);
-
   return yield call(prependHttp, resource);
 }
 
@@ -51,10 +50,9 @@ export function* buildHeaders({ headers, basicAuth }) {
   if (basicAuth && basicAuth.username) {
     requestHeaders.append(
       'Authorization',
-      `Basic ${base64Encode(`${basicAuth.username}:${basicAuth.password}`)}`,
+      `Basic ${base64Encode(`${basicAuth.username}:${basicAuth.password}`)}`
     );
   }
-
   return requestHeaders;
 }
 
@@ -70,7 +68,6 @@ export function getMillisPassed(before) {
 
 function buildResponseHeaders(response) {
   const headers = [];
-
   // eslint-disable-next-line no-restricted-syntax
   for (const header of response.headers) {
     headers.push({
@@ -78,7 +75,6 @@ function buildResponseHeaders(response) {
       value: header[1],
     });
   }
-
   return headers;
 }
 
@@ -86,18 +82,15 @@ function createUUID() {
   if (process.env.NODE_ENV === 'test') {
     return 'test-UUID';
   }
-
   return UUID.create().toString();
 }
 
 export function* fetchData({ request }) {
   try {
     yield put(executeRequest());
-
     const resource = yield call(createResource, request);
     const headers = yield call(buildHeaders, request);
     const ignoreCache = yield select(getIgnoreCache);
-
     // Build body for requests that support it
     let body;
     if (!['GET', 'HEAD'].includes(request.method)) {
@@ -105,15 +98,11 @@ export function* fetchData({ request }) {
         ? buildRequestData(request.bodyType, request.formData)
         : request.data;
     }
-
     const historyEntry = Immutable.fromJS(request)
       .set('url', resource)
       .set('id', createUUID());
-
     yield put(pushHistory(historyEntry));
-
     const beforeTime = yield call(getBeforeTime);
-
     const response = yield call(fetch, resource, {
       method: request.method,
       redirect: 'follow',
@@ -122,12 +111,9 @@ export function* fetchData({ request }) {
       credentials: 'include', // Include cookies
       cache: ignoreCache ? 'no-store' : 'default',
     });
-
     const millisPassed = yield call(getMillisPassed, beforeTime);
-
     const responseHeaders = buildResponseHeaders(response);
     const responseBody = yield apply(response, response.text);
-
     yield put(receiveResponse({
       url: response.url,
       status: response.status,
@@ -143,13 +129,12 @@ export function* fetchData({ request }) {
 }
 
 function* selectRequest({ request }) {
-  yield put(initialize(requestForm, request));
+  // Removed: yield put(initialize(requestForm, request));
   yield call(focusUrlField);
 }
 
 function setContentType(array, value) {
   const index = array.findIndex(item => item.name === 'Content-Type');
-
   // Replace any existing Content-Type headers
   if (index > -1) {
     return [
@@ -158,7 +143,6 @@ function setContentType(array, value) {
       ...array.slice(index + 1),
     ];
   }
-
   // When the last row is empty, overwrite it instead of pushing
   const lastItem = array.length >= 1
     ? array[array.length - 1]
@@ -169,7 +153,6 @@ function setContentType(array, value) {
       { name: 'Content-Type', value },
     ];
   }
-
   return [
     ...array,
     { name: 'Content-Type', value },
@@ -193,7 +176,7 @@ export function* changeBodyTypeSaga({ bodyType }) {
     default:
       throw new Error(`Body type ${bodyType} is not supported`);
   }
-  yield put(change(requestForm, 'headers', headers));
+  // Removed: yield put(change(requestForm, 'headers', headers));
   // For persistence on load
   yield put(updateOption('bodyType', bodyType));
 }
@@ -203,4 +186,3 @@ export default function* rootSaga() {
   yield takeEvery(SELECT_REQUESTED, selectRequest);
   yield takeEvery(CHANGE_BODY_TYPE, changeBodyTypeSaga);
 }
-

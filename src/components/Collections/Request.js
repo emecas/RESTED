@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { DragSource, DropTarget } from 'react-dnd';
 import { ListGroup } from 'react-bootstrap';
-import flow from 'lodash.flow';
+import flow from 'lodash/flow';
 
 import IconButton from 'components/IconButton';
 import * as CollectionActions from 'store/collections/actions';

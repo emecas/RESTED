@@ -1,9 +1,11 @@
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 // eslint-disable-next-line no-unused-expressions
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   body {
     overflow-x: hidden;
   }
 `;
+
+export default GlobalStyle; 
 

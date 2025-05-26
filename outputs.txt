@@ -1,0 +1,565 @@
+$ npm install
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+added 994 packages, and audited 995 packages in 49s
+
+194 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+/RESTED (master)
+$ npm run build
+
+> rested@2.5.0 build
+> cross-env NODE_ENV=production webpack
+
+assets by status 1.54 MiB [cached] 1 asset
+orphan modules 772 KiB [orphan] 449 modules
+runtime modules 1.29 KiB 7 modules
+built modules 3.47 MiB [built]
+  modules by path ./node_modules/ 3.14 MiB 334 modules
+  modules by path ./src/ 332 KiB
+    modules by path ./src/store/ 56.4 KiB 24 modules
+    modules by path ./src/components/ 256 KiB 9 modules
+    modules by path ./src/utils/*.js 4.66 KiB
+      ./src/utils/requestUtils.js 3.63 KiB [built] [code generated]
+      + 2 modules
+    modules by path ./src/propTypes/*.js 4.13 KiB
+      ./src/propTypes/collection.js 1.85 KiB [built] [code generated]
+      ./src/propTypes/request.js 2.27 KiB [built] [code generated]
+    ./src/index.js + 1 modules 4.53 KiB [built] [code generated]
+    ./src/constants/constants.js 6.45 KiB [built] [code generated]
+
+WARNING in ./src/components/App/GlobalStyles.js 6:0-12
+export 'injectGlobal' (imported as 'injectGlobal') was not found in 'styled-components' (possible exports: ServerStyleSheet, StyleSheetConsumer, StyleSheetContext, StyleSheetManager, ThemeConsumer, ThemeContext, ThemeProvider, __PRIVATE__, createGlobalStyle, css, default, isStyledComponent, keyframes, styled, useTheme, version, withTheme)
+ @ ./src/components/App/index.js 21:0-24
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/App/index.js 91:4-19
+export 'DragDropContext' (imported as 'DragDropContext') was not found in 'react-dnd' (possible exports: DndContext, DndProvider, DragPreviewImage, useDrag, useDragDropManager, useDragLayer, useDrop)
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/App/index.js 91:20-32
+export 'default' (imported as 'HTML5Backend') was not found in 'react-dnd-html5-backend' (possible exports: HTML5Backend, NativeTypes, getEmptyImage)
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Collections/Collection.js 267:31-41
+export 'DropTarget' (imported as 'DropTarget') was not found in 'react-dnd' (possible exports: DndContext, DndProvider, DragPreviewImage, useDrag, useDragDropManager, useDragLayer, useDrop)
+ @ ./src/components/Collections/CollectionList.js 11:0-38 23:74-84
+ @ ./src/components/Collections/index.js 6:0-46 33:32-46
+ @ ./src/components/LeftPanel/index.js 9:0-49 37:64-75
+ @ ./src/components/App/index.js 10:0-45 63:40-49
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Collections/Collection.js 269:5-15
+export 'DragSource' (imported as 'DragSource') was not found in 'react-dnd' (possible exports: DndContext, DndProvider, DragPreviewImage, useDrag, useDragDropManager, useDragLayer, useDrop)
+ @ ./src/components/Collections/CollectionList.js 11:0-38 23:74-84
+ @ ./src/components/Collections/index.js 6:0-46 33:32-46
+ @ ./src/components/LeftPanel/index.js 9:0-49 37:64-75
+ @ ./src/components/App/index.js 10:0-45 63:40-49
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Collections/Request.js 222:20-30
+export 'DropTarget' (imported as 'DropTarget') was not found in 'react-dnd' (possible exports: DndContext, DndProvider, DragPreviewImage, useDrag, useDragDropManager, useDragLayer, useDrop)
+ @ ./src/components/Collections/Collection.js 19:0-32 236:73-80
+ @ ./src/components/Collections/CollectionList.js 11:0-38 23:74-84
+ @ ./src/components/Collections/index.js 6:0-46 33:32-46
+ @ ./src/components/LeftPanel/index.js 9:0-49 37:64-75
+ @ ./src/components/App/index.js 10:0-45 63:40-49
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Collections/Request.js 224:5-15
+export 'DragSource' (imported as 'DragSource') was not found in 'react-dnd' (possible exports: DndContext, DndProvider, DragPreviewImage, useDrag, useDragDropManager, useDragLayer, useDrop)
+ @ ./src/components/Collections/Collection.js 19:0-32 236:73-80
+ @ ./src/components/Collections/CollectionList.js 11:0-38 23:74-84
+ @ ./src/components/Collections/index.js 6:0-46 33:32-46
+ @ ./src/components/LeftPanel/index.js 9:0-49 37:64-75
+ @ ./src/components/App/index.js 10:0-45 63:40-49
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Collections/index.js 29:27-32
+export 'Panel' (imported as 'Panel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/LeftPanel/index.js 9:0-49 37:64-75
+ @ ./src/components/App/index.js 10:0-45 63:40-49
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Fonticon/StyledComponents.js 7:35-43
+export 'Clearfix' (imported as 'Clearfix') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/Fonticon/index.js 3:0-52 10:27-41
+ @ ./src/components/Modal/index.js
+ @ ./src/components/App/index.js 14:0-37 72:59-64
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/History/StyledComponents.js 5:26-39
+export 'Panel' (imported as 'UnstyledPanel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/History/index.js 5:0-43 29:27-32
+ @ ./src/components/LeftPanel/index.js 10:0-41 37:127-134
+ @ ./src/components/App/index.js 10:0-45 63:40-49
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/LeftPanel/StyledComponents.js 5:26-39
+export 'Panel' (imported as 'UnstyledPanel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/LeftPanel/index.js 13:0-59 16:28-42 32:28-33
+ @ ./src/components/App/index.js 10:0-45 63:40-49
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/ExportPane.js 74:30-38
+export 'Clearfix' (imported as 'Clearfix') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 8:0-38 73:36-46
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/ExportPane.js 111:41-53
+export 'ControlLabel' (imported as 'ControlLabel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 8:0-38 73:36-46
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/GeneralOptionsPane.js 24:45-57
+export 'ControlLabel' (imported as 'ControlLabel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 5:0-54 43:36-54
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/GeneralOptionsPane.js 42:45-57
+export 'ControlLabel' (imported as 'ControlLabel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 5:0-54 43:36-54
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/GeneralOptionsPane.js 63:45-57
+export 'ControlLabel' (imported as 'ControlLabel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 5:0-54 43:36-54
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/GeneralOptionsPane.js 80:45-57
+export 'ControlLabel' (imported as 'ControlLabel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 5:0-54 43:36-54
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/GeneralOptionsPane.js 98:45-57
+export 'ControlLabel' (imported as 'ControlLabel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 5:0-54 43:36-54
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/GeneralOptionsPane.js 100:39-47
+export 'Checkbox' (imported as 'Checkbox') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 5:0-54 43:36-54
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/GeneralOptionsPane.js 108:39-47
+export 'Checkbox' (imported as 'Checkbox') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 5:0-54 43:36-54
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/GeneralOptionsPane.js 116:39-47
+export 'Checkbox' (imported as 'Checkbox') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 5:0-54 43:36-54
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/GeneralOptionsPane.js 124:39-47
+export 'Checkbox' (imported as 'Checkbox') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 5:0-54 43:36-54
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/GeneralOptionsPane.js 132:39-47
+export 'Checkbox' (imported as 'Checkbox') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 5:0-54 43:36-54
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/ImportPane.js 36:45-57
+export 'ControlLabel' (imported as 'ControlLabel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 7:0-38 63:36-46
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/ImportPane.js 131:30-38
+export 'Clearfix' (imported as 'Clearfix') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 7:0-38 63:36-46
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/StyledComponents.js 7:41-49
+export 'Clearfix' (imported as 'Clearfix') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/GeneralOptionsPane.js 8:0-58 16:28-48
+ @ ./src/components/OptionsModal/index.js 5:0-54 43:36-54
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/SyncPane.js 57:28-36
+export 'Clearfix' (imported as 'Clearfix') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 6:0-34 53:36-44
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/SyncPane.js 72:43-51
+export 'Checkbox' (imported as 'Checkbox') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 6:0-34 53:36-44
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/OptionsModal/TemplateOptionsPane.js 15:28-36
+export 'Clearfix' (imported as 'Clearfix') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/OptionsModal/index.js 4:0-56 33:36-55
+ @ ./src/utils/modal.js 3:0-48 12:30-39
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Request/BasicAuthField.js 46:38-46
+export 'Checkbox' (imported as 'Checkbox') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/Request/index.js 20:0-46 76:19-33
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Request/BodyField.js 118:22-34
+export 'ControlLabel' (imported as 'ControlLabel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/Request/index.js 21:0-36 77:76-85
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Request/MethodField.js 30:39-51
+export 'ControlLabel' (imported as 'ControlLabel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/Request/index.js 17:0-59 33:17-30 44:23-34
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Request/StyledComponents.js 6:33-41
+export 'Clearfix' (imported as 'Clearfix') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/Request/HeadersField.js 12:0-65 55:36-47 68:37-51
+ @ ./src/components/Request/index.js 19:0-42 73:19-31
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Request/URLField.js 20:35-47
+export 'ControlLabel' (imported as 'ControlLabel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/Request/index.js 16:0-34 50:23-31
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Request/index.js 34:27-32
+export 'Panel' (imported as 'Panel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Response/StyledComponents.js 24:27-32
+export 'Panel' (imported as 'Panel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/Response/Redirect.js 3:0-74 12:27-39 42:28-42 52:35-41
+ @ ./src/components/Response/index.js 10:0-34 49:78-86
+ @ ./src/components/App/index.js 12:0-43 69:73-81
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Response/StyledComponents.js 30:37-42
+export 'Panel' (imported as 'Panel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/Response/Redirect.js 3:0-74 12:27-39 42:28-42 52:35-41
+ @ ./src/components/Response/index.js 10:0-34 49:78-86
+ @ ./src/components/App/index.js 12:0-43 69:73-81
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Response/index.js 43:31-36
+export 'Panel' (imported as 'Panel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/App/index.js 12:0-43 69:73-81
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Root/Root.dev.js 7:28-32
+export 'Grid' (imported as 'Grid') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/components/Root/Root.prod.js 6:27-31
+export 'Grid' (imported as 'Grid') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.prod.js
+ @ ./src/index.js 13:11-64
+
+WARNING in ./src/utils/modal.js 31:39-51
+export 'ControlLabel' (imported as 'ControlLabel') was not found in 'react-bootstrap' (possible exports: Accordion, AccordionBody, AccordionButton, AccordionCollapse, AccordionContext, AccordionHeader, AccordionItem, Alert, AlertHeading, AlertLink, Anchor, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardSubtitle, CardText, CardTitle, Carousel, CarouselCaption, CarouselItem, CloseButton, Col, Collapse, Container, Dropdown, DropdownButton, DropdownDivider, DropdownHeader, DropdownItem, DropdownItemText, DropdownMenu, DropdownToggle, Fade, Figure, FigureCaption, FigureImage, FloatingLabel, Form, FormCheck, FormControl, FormFloating, FormGroup, FormLabel, FormSelect, FormText, Image, InputGroup, ListGroup, ListGroupItem, Modal, ModalBody, ModalDialog, ModalFooter, ModalHeader, ModalTitle, Nav, NavDropdown, NavItem, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarOffcanvas, NavbarText, NavbarToggle, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle, OffcanvasToggling, Overlay, OverlayTrigger, PageItem, Pagination, Placeholder, PlaceholderButton, Popover, PopoverBody, PopoverHeader, ProgressBar, Ratio, Row, SSRProvider, Spinner, SplitButton, Stack, Tab, TabContainer, TabContent, TabPane, Table, Tabs, ThemeProvider, Toast, ToastBody, ToastContainer, ToastHeader, ToggleButton, ToggleButtonGroup, Tooltip, useAccordionButton)
+ @ ./src/components/Request/Titlebar.js 14:0-74 72:12-37 81:21-37
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+WARNING in DefinePlugin
+Conflicting values for 'process.env.NODE_ENV'
+
+1 warning has detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+ERROR in ./src/components/DevTools/index.js 4:0-48
+Module not found: Error: Can't resolve 'redux-devtools' in '\RESTED\src\components\DevTools'
+ @ ./src/components/Root/Root.dev.js 4:0-43 9:61-69
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+ERROR in ./src/components/DevTools/index.js 5:0-52
+Module not found: Error: Can't resolve 'redux-devtools-log-monitor' in '\RESTED\src\components\DevTools'
+ @ ./src/components/Root/Root.dev.js 4:0-43 9:61-69
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+ERROR in ./src/components/DevTools/index.js 6:0-54
+Module not found: Error: Can't resolve 'redux-devtools-dock-monitor' in '\RESTED\src\components\DevTools'
+ @ ./src/components/Root/Root.dev.js 4:0-43 9:61-69
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+ERROR in ./src/components/Request/BodyField.js 8:0-47
+Module not found: Error: Can't resolve 'redux-form' in '\RESTED\src\components\Request'
+ @ ./src/components/Request/index.js 21:0-36 77:76-85
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+ERROR in ./src/components/Request/HeadersField.js 7:0-35
+Module not found: Error: Can't resolve 'redux-form' in '\RESTED\src\components\Request'
+ @ ./src/components/Request/index.js 19:0-42 73:19-31
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+ERROR in ./src/components/Request/Titlebar.js 10:0-73
+Module not found: Error: Can't resolve 'redux-form' in '\RESTED\src\components\Request'
+ @ ./src/components/Request/index.js 15:0-34 35:30-38
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+ERROR in ./src/components/Request/index.js 8:0-81
+Module not found: Error: Can't resolve 'redux-form' in '\RESTED\src\components\Request'
+ @ ./src/components/App/index.js
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+ERROR in ./src/components/Response/Response.js 5:0-38
+Module not found: Error: Can't resolve 'xml-formatter' in '\RESTED\src\components\Response'
+ @ ./src/components/Response/index.js 11:0-34 54:32-40
+ @ ./src/components/App/index.js 12:0-43 69:73-81
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+ERROR in ./src/index.js 4:0-38
+Module not found: Error: Can't resolve 'localforage' in '\RESTED\src'
+
+ERROR in ./src/index.js 5:0-71
+Module not found: Error: Can't resolve 'localforage-webextensionstorage-driver/local' in '\RESTED\src'
+
+ERROR in ./src/index.js 6:0-69
+Module not found: Error: Can't resolve 'localforage-webextensionstorage-driver/sync' in '\RESTED\src'
+
+ERROR in ./src/store/collections/sagas.js 2:0-38
+Module not found: Error: Can't resolve 'localforage' in '\RESTED\src\store\collections'
+ @ ./src/store/sagas.js 5:0-51 12:13-29
+ @ ./src/store/configureStore.prod.js
+ @ ./src/store/ sync ^\.\/configureStore\..*\.js$ ./configureStore.prod.js
+ @ ./src/index.js 12:21-74
+
+ERROR in ./src/store/config/sagas.js 2:0-40
+Module not found: Error: Can't resolve 'redux-form' in '\RESTED\src\store\config'
+ @ ./src/store/sagas.js 7:0-41 14:13-24
+ @ ./src/store/configureStore.prod.js
+ @ ./src/store/ sync ^\.\/configureStore\..*\.js$ ./configureStore.prod.js
+ @ ./src/index.js 12:21-74
+
+ERROR in ./src/store/history/sagas.js 2:0-38
+Module not found: Error: Can't resolve 'localforage' in '\RESTED\src\store\history'
+ @ ./src/store/sagas.js 3:0-43 10:13-25
+ @ ./src/store/configureStore.prod.js
+ @ ./src/store/ sync ^\.\/configureStore\..*\.js$ ./configureStore.prod.js
+ @ ./src/index.js 12:21-74
+
+ERROR in ./src/store/index.js 2:0-45
+Module not found: Error: Can't resolve 'redux-form' in '\RESTED\src\store'
+ @ ./src/store/configureStore.prod.js
+ @ ./src/store/ sync ^\.\/configureStore\..*\.js$ ./configureStore.prod.js
+ @ ./src/index.js 12:21-74
+
+ERROR in ./src/store/options/sagas.js 2:0-38
+Module not found: Error: Can't resolve 'localforage' in '\RESTED\src\store\options'
+ @ ./src/store/sagas.js 4:0-43 11:13-25
+ @ ./src/store/configureStore.prod.js
+ @ ./src/store/ sync ^\.\/configureStore\..*\.js$ ./configureStore.prod.js
+ @ ./src/index.js 12:21-74
+
+ERROR in ./src/store/options/sagas.js 4:0-36
+Module not found: Error: Can't resolve 'redux-form' in '\RESTED\src\store\options'
+ @ ./src/store/sagas.js 4:0-43 11:13-25
+ @ ./src/store/configureStore.prod.js
+ @ ./src/store/ sync ^\.\/configureStore\..*\.js$ ./configureStore.prod.js
+ @ ./src/index.js 12:21-74
+
+ERROR in ./src/store/request/sagas.js 8:0-48
+Module not found: Error: Can't resolve 'redux-form' in '\RESTED\src\store\request'
+ @ ./src/store/sagas.js 2:0-43 9:13-25
+ @ ./src/store/configureStore.prod.js
+ @ ./src/store/ sync ^\.\/configureStore\..*\.js$ ./configureStore.prod.js
+ @ ./src/index.js 12:21-74
+
+ERROR in ./src/store/request/selectors.js 1:0-43
+Module not found: Error: Can't resolve 'redux-form' in '\RESTED\src\store\request'
+ @ ./src/components/Response/index.js 7:0-108 70:12-23 71:23-45 72:17-33 74:11-21
+ @ ./src/components/App/index.js 12:0-43 69:73-81
+ @ ./src/components/Root/Root.dev.js
+ @ ./src/components/Root/ sync ^\.\/Root\..*\.js$ ./Root.dev.js
+ @ ./src/index.js 13:11-64
+
+ERROR in ./src/store/urlVariables/sagas.js 2:0-38
+Module not found: Error: Can't resolve 'localforage' in '\RESTED\src\store\urlVariables'
+ @ ./src/store/sagas.js 6:0-53 13:13-30
+ @ ./src/store/configureStore.prod.js
+ @ ./src/store/ sync ^\.\/configureStore\..*\.js$ ./configureStore.prod.js
+ @ ./src/index.js 12:21-74
+
+20 errors have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.99.9 compiled with 20 errors and 42 warnings in 9035 ms

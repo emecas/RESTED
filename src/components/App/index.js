@@ -1,8 +1,9 @@
+import GlobalStyle from './GlobalStyles';
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import HTML5Backend from 'react-dnd-html5-backend';
 import { DragDropContext } from 'react-dnd';
-import flow from 'lodash.flow';
+import flow from 'lodash/flow';
 
 import Header from 'components/Header';
 import LeftPanel from 'components/LeftPanel';
@@ -59,6 +60,7 @@ class App extends React.Component {
 
     return (
       <Wrapper>
+        <GlobalStyle /> 
         <Header />
         <MainContent>
           <LeftCol

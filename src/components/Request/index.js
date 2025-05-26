@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { reduxForm, Field, Fields, FieldArray, getFormValues } from 'redux-form';
 import { Row, Col, Panel, Form } from 'react-bootstrap';
-import flow from 'lodash.flow';
+import flow from 'lodash/flow';
 
 import * as requestActions from 'store/request/actions';
 import * as collectionsActions from 'store/collections/actions';
